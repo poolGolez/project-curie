@@ -38,7 +38,7 @@
         <v-row>
           <v-col cols="1">
             <v-sheet rounded="lg" dark>
-              <v-card elevation="12">
+              <v-card rounded="lg" elevation="12">
                 <v-list class="pa-3" nav dense>
                   <v-list-item link>
                     <v-list-item-avatar>
@@ -78,7 +78,7 @@
           </v-col>
           <v-col>
             <v-sheet min-height="70vh" rounded="lg" dark>
-              <v-card elevation="12">
+              <v-card elevation="12" rounded="lg">
                 <HelloWorld />
               </v-card>
             </v-sheet>
