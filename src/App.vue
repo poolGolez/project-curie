@@ -1,48 +1,5 @@
 <template>
   <v-app>
-    <div class="mr-12 mt-12 pa-12">
-      <v-card elevation="12" width="56" class="rounded-lg">
-        <v-navigation-drawer mini-variant permanent>
-          <v-list-item class="px-2">
-            <v-list-item-avatar>
-              <v-img
-                src="https://randomuser.me/api/portraits/men/85.jpg"
-              ></v-img>
-            </v-list-item-avatar>
-
-            <v-list-item-title>John Leider</v-list-item-title>
-
-            <v-btn icon @click.stop="mini = !mini">
-              <v-icon>mdi-chevron-left</v-icon>
-            </v-btn>
-          </v-list-item>
-
-          <v-divider></v-divider>
-
-          <v-list nav dense>
-            <v-list-item link>
-              <v-list-item-icon>
-                <v-icon>mdi-folder</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title>My Files</v-list-item-title>
-            </v-list-item>
-            <v-list-item link>
-              <v-list-item-icon>
-                <v-icon>mdi-account-multiple</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title>Shared with me</v-list-item-title>
-            </v-list-item>
-            <v-list-item link>
-              <v-list-item-icon>
-                <v-icon>mdi-star</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title>Starred</v-list-item-title>
-            </v-list-item>
-          </v-list>
-        </v-navigation-drawer>
-      </v-card>
-    </div>
-
     <v-app-bar app color="primary" dark>
       <div class="d-flex align-center">
         <v-img
@@ -76,21 +33,71 @@
       </v-btn>
     </v-app-bar>
 
-    <v-main>
-      <!-- <HelloWorld/> -->
+    <v-main class="grey lighten-3">
+      <v-container class="my-8">
+        <v-row>
+          <v-col cols="1">
+            <v-sheet rounded="lg" dark>
+              <v-card elevation="12">
+                <v-list class="pa-3" nav dense>
+                  <v-list-item link>
+                    <v-list-item-avatar>
+                      <v-img
+                        src="https://randomuser.me/api/portraits/men/85.jpg"
+                      >
+                      </v-img>
+                    </v-list-item-avatar>
+                    <v-list-item-title>Pool</v-list-item-title>
+                  </v-list-item>
+                </v-list>
+
+                <v-divider></v-divider>
+
+                <v-list class="pa-3" nav dense>
+                  <v-list-item link>
+                    <v-list-item-icon>
+                      <v-icon>mdi-folder</v-icon>
+                    </v-list-item-icon>
+                    <v-list-item-title>My Files</v-list-item-title>
+                  </v-list-item>
+                  <v-list-item link>
+                    <v-list-item-icon>
+                      <v-icon>mdi-account-multiple</v-icon>
+                    </v-list-item-icon>
+                    <v-list-item-title>Shared with me</v-list-item-title>
+                  </v-list-item>
+                  <v-list-item link>
+                    <v-list-item-icon>
+                      <v-icon>mdi-star</v-icon>
+                    </v-list-item-icon>
+                    <v-list-item-title>Starred</v-list-item-title>
+                  </v-list-item>
+                </v-list>
+              </v-card>
+            </v-sheet>
+          </v-col>
+          <v-col>
+            <v-sheet min-height="70vh" rounded="lg" dark>
+              <v-card elevation="12">
+                <HelloWorld />
+              </v-card>
+            </v-sheet>
+          </v-col>
+        </v-row>
+      </v-container>
     </v-main>
   </v-app>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld';
+import HelloWorld from "./components/HelloWorld";
 
 export default {
   name: "App",
 
-  // components: {
-  //   HelloWorld,
-  // },
+  components: {
+    HelloWorld,
+  },
 
   data: () => ({
     //
