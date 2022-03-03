@@ -42,9 +42,7 @@
                 <v-list class="pa-3" nav dense>
                   <v-list-item link>
                     <v-list-item-avatar>
-                      <v-img
-                        src="https://randomuser.me/api/portraits/men/85.jpg"
-                      >
+                      <v-img :src="require('./assets/profile-picture.jpg')">
                       </v-img>
                     </v-list-item-avatar>
                     <v-list-item-title>Pool</v-list-item-title>
